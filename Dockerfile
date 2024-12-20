@@ -10,6 +10,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Install pip requirements
+# add --progress-bar off for RuntimeError: can't start new thread
 COPY requirements.txt .
 RUN python -m pip install --progress-bar off -r requirements.txt
 
